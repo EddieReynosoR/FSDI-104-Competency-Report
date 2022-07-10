@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
+
+
+    <title>Pet Salon</title>
+</head>
+<body>
+    <header>
+        
+        <nav class="nav justify-content-end">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="register.html">Register</a>
+            
+        </nav>
+        <h1 class="display-1"><i class="fa-solid fa-dog"></i> The Fashion Pet</h1>
+    </header>
+
+
+    <main class="container">
+        
+        <div class="title">
+            <h2>Register a new pet!</h2>
+
+            <p id="container-pets"></p>
+        </div>
+
+        <div class="form">
+            <h6>Name:</h6>
+            <input type="text" placeholder="Enter pet's name" id="txtPetName" class="form-control">
+
+            <h6>Age:</h6>
+            <input type="number" placeholder="Enter pet's age" id="txtPetAge" class="form-control">
+
+
+            <h6>Breed:</h6>
+            <input type="text" placeholder="Enter pet's breed" id="txtPetBreed" class="form-control">
+
+            <h6>Gender:</h6>
+            <select class="form-select" id="txtPetGender" >
+                <option value="Male">Male</option>
+
+                <option value="Female">Female</option>
+
+            </select>
+
+            <h6>Service:</h6>
+            <select class="form-select" id="txtPetService" >
+                <option value="Nails cut">Nails cut</option>
+
+                <option value="Grooming">Grooming</option>
+
+                <option value="Vaccine">Vaccine</option>
+            </select>
+
+            <h6>Owner name:</h6>
+            <input type="text" placeholder="Enter pet's owner name" id="txtPetOwner" class="form-control">
+
+            <h6>Owner phone number:</h6>
+            <input type="text" placeholder="Enter pet's owner contact number" id="txtPetOwnerNumber" class="form-control">
+
+            <div class="btn-container">
+                <input type="button" value="Register" onclick="register()" class="btn btn-primary">
+            </div>
+    
+        </div>
+
+        <div>
+            <h2 class="listTitle">Search Pet</h2>
+
+            <div class="form-floating">
+                <input type="search" class="form-control" id="searchPet" placeholder="Search">
+                <label for="searchPet">Search pet</label>
+                <button class="btn btn-primary search" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            
+        </div>
+
+        <!--<div>
+            <h2 class="listTitle">Pet's list</h2>
+            <ol id="listPets">
+
+            </ol>
+        </div> -->
+
+        <div id="pet-cards" class="pets">
+
+        </div>
+        <h2 class="listTitle">Pet's list</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Breed</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Service</th>
+                  <th scope="col">Owner's name</th>
+                  <th scope="col">Owner's phone</th>
+                  <th scope="col"> </th>
+                </tr>
+              </thead>
+              <tbody id="tablePets">
+
+              </tbody>
+          </table>
+    </main>
+
+
+    <footer>
+        <div>
+            <p>All the copyrights reserved &copy; 2022 </p>
+            <div  id="salonInfo" class="information">
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/register.js"></script>
+    <script src="scripts/display.js"></script>
+</body>
+</html>
